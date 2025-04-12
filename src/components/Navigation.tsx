@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Sparkles, Star } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
-import { MoonGem } from './MoonGem';
+import { NavigationMoon } from './NavigationMoon';
 
 const menuItems = [
   { title: 'MISSION', href: '#mission' },
@@ -83,7 +83,7 @@ export function Navigation() {
               <Canvas camera={{ position: [0, 0, 5] }}>
                 <ambientLight intensity={0.8} />
                 <pointLight position={[10, 10, 10]} intensity={1.5} />
-                <MoonGem isHovered={hoveredItem !== null} />
+                <NavigationMoon isHovered={hoveredItem !== null} />
               </Canvas>
             </div>
             
